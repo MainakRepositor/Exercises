@@ -1,0 +1,50 @@
+input[type=message], input[type=email], input[type=text], textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.btn {
+  color: green;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid green;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: green;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}
+
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
